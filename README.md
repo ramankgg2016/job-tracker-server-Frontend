@@ -57,8 +57,9 @@ To run this application locally, you will need Node.js and npm (or Yarn) install
 
 Please refer to the individual `README.md` files for detailed setup and running instructions for each part:
 
-* **[Frontend Setup Guide (`client/README.md`)](client/README.md)**
-* **[Backend Setup Guide (`server/README.md`)](server/README.md)**
+* **[Frontend Setup Guide (`client/README.md`)](/README.md)**
+* **[Backend Setup Guide (`server/README.md`)](https://github.com/ramankgg2016/job-tracker-server-backend-/blob/main/README.md)**
+
 
 ## Evaluation Criteria (as per challenge)
 
