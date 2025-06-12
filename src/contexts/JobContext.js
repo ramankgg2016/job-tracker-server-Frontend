@@ -38,7 +38,7 @@ export const JobProvider = ({ children }) => {
     // Initial fetch of jobs when the component mounts
     useEffect(() => {
         fetchJobs(currentPage); // Fetch the current page initially
-    }, [fetchJobs]); // Depend on fetchJobs
+    }, [fetchJobs, currentPage]); // Depend on fetchJobs
 
     // Functions for CRUD operations (updated to potentially refetch current page)
     const addJob = async (jobData) => {
