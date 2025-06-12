@@ -1,5 +1,3 @@
-# Define the README content
-readme_content = """# Job Application Tracker: Full-Stack Web Application
 
 ## Overview
 
