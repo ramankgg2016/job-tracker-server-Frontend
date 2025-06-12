@@ -1,4 +1,5 @@
-# Job Application Tracker: Full-Stack Web Application
+# Define the README content
+readme_content = """# Job Application Tracker: Full-Stack Web Application
 
 ## Overview
 
@@ -57,118 +58,78 @@ To run this application locally, you will need Node.js and npm (or Yarn) install
 
 Please refer to the individual `README.md` files for detailed setup and running instructions for each part:
 
-* **[Frontend Setup Guide (`client/README.md`)](/README.md)**
+* **[Frontend Setup Guide (`client/README.md`)](#frontend-client)**
 * **[Backend Setup Guide (`server/README.md`)](https://github.com/ramankgg2016/job-tracker-server-backend-/blob/main/README.md)**
 
+## Frontend (Client)
 
-## Evaluation Criteria (as per challenge)
+### Overview
 
-* **Code structure & clarity:** 20%
-* **React and Node.js usage:** 20%
-* **RESTful API design:** 15%
-* **Authentication & security:** 15%
-* **Functionality completeness:** 15%
-* **Error handling & validation:** 10%
-* **UI/UX polish (basic OK):** 5%
+This directory contains the ReactJS frontend for the Job Application Tracker application. It provides the user interface for all interactions, including user authentication, job application management, and various data display features like search, filter, sort, and pagination.
 
+### Features
 
+* User Authentication Views: Register, Login, Logout.
+* Job Dashboard: Display a paginated list of job applications.
+* Add/Edit Job Forms: Intuitive forms for creating and updating entries.
+* Search Functionality: Filter applications by company or role dynamically.
+* Filter by Status: Selectively show applications based on their status.
+* Sort Options: Order applications by date applied (newest/oldest) or company name.
+* Pagination Controls: Navigate through long lists of applications.
+* Color-coded Statuses: Visual cues for quick status identification.
+* Light/Dark Mode: Customizable theme toggle for user preference.
+* Responsive Design: Adapts to various screen sizes (mobile, tablet, desktop).
 
+### Technologies
 
+* ReactJS (with Hooks)
+* Context API (for state management)
+* React Router DOM (for client-side routing)
+* Axios (for API communication)
+* HTML5
+* CSS3 (custom styling, no frameworks)
+* JavaScript (ES6+)
 
-
-# Job Application Tracker - Frontend (Client)
-
-## Overview
-
-This directory contains the ReactJS frontend for the Job Application Tracker application. It provides the user interface for all interactions, including user authentication, job application management, and various data display features like search, filter, sort, and pagination. The UI is built entirely with plain HTML and CSS to demonstrate core frontend skills.
-
-## Features
-
-* **User Authentication Views:** Register, Login, Logout.
-* **Job Dashboard:** Display a paginated list of job applications.
-* **Add/Edit Job Forms:** Intuitive forms for creating and updating entries.
-* **Search Functionality:** Filter applications by company or role dynamically.
-* **Filter by Status:** Selectively show applications based on their status.
-* **Sort Options:** Order applications by date applied (newest/oldest) or company name.
-* **Pagination Controls:** Navigate through long lists of applications.
-* **Color-coded Statuses:** Visual cues for quick status identification.
-* **Light/Dark Mode:** Customizable theme toggle for user preference.
-* **Responsive Design:** Adapts to various screen sizes (mobile, tablet, desktop).
-
-## Technologies
-
-* **ReactJS** (with Hooks)
-* **Context API** (for state management)
-* **React Router DOM** (for client-side routing)
-* **Axios** (for API communication)
-* **HTML5**
-* **CSS3** (custom styling, no frameworks)
-* **JavaScript (ES6+)**
-
-## Prerequisites
+### Prerequisites
 
 * Node.js (LTS version recommended)
 * npm or Yarn (package manager)
 
-## Installation & Setup
+### Installation & Setup
 
-1.  **Navigate to the client directory:**
+1. Navigate to the client directory:
     ```bash
     cd job-application-tracker/client
     ```
 
-2.  **Install dependencies:**
+2. Install dependencies:
     ```bash
     npm install
     # or
     yarn install
     ```
 
-3.  **Configure Environment Variables:**
+3. Configure Environment Variables:
     Create a `.env` file in the `client` directory (at the same level as `package.json`). This file tells your React app where to find your backend API.
-
-    ```dotenv
-    # .env
-    REACT_APP_BACKEND_URL=http://localhost:5000/api
+    ```env
+    REACT_APP_BACKEND_URL=https://job-tracker-backend-orqx.onrender.com
     ```
-    * **Important:** Replace `http://localhost:5000` with your deployed backend URL if you deploy your backend separately.
 
-4.  **Start the development server:**
+4. Start the development server:
     ```bash
     npm start
     # or
     yarn start
     ```
-    The application should open in your browser at `http://localhost:3000` (or another port if 3000 is in use).
-
-## Usage
-
-1.  **Register:** Create a new user account.
-2.  **Login:** Log in with your registered credentials.
-3.  **Dashboard:** View your job applications.
-    * Use the search bar to find specific companies or roles.
-    * Filter by status using the dropdown.
-    * Sort your applications using the sort dropdown.
-    * Navigate through pages using the pagination controls.
-    * Click "Add New Application" to add a new entry.
-    * Click "Edit" or "Delete" on individual job cards to manage them.
-4.  **Theme Toggle:** Use the button in the navigation bar to switch between light and dark modes.
-
-## UI/UX Philosophy
-
-The user interface was crafted with a focus on readability and basic usability.
-* **No CSS Frameworks:** All styling is custom-written CSS to demonstrate fundamental CSS skills.
-* **Clean Design:** A minimalist approach ensures that information is easy to consume without unnecessary visual distractions.
-* **Responsive Layouts:** Flexbox, CSS Grid, and media queries are used to ensure optimal viewing across various screen sizes.
 
 ## Deployment
 
-This frontend can be easily deployed to static hosting services like Netlify, Vercel, or GitHub Pages.
-* Run `npm run build` (or `yarn build`) to create a production-ready build in the `build` folder.
-* Upload the contents of the `build` folder to your chosen hosting service.
-* Ensure that `REACT_APP_BACKEND_URL` in your `.env` file (or build configuration) points to your **deployed backend API URL**.
-
+To deploy the frontend:
+* Run `npm run build` (or `yarn build`) to create a production-ready build.
+* Upload the contents of the `build` folder to Netlify, Vercel, or GitHub Pages.
+* Ensure your `.env` points to the deployed backend API.
 
 ## Contact
 
 For any questions or feedback, please contact: ramankgg2016@gmail.com
+"""
