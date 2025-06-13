@@ -6,7 +6,7 @@ import JobStatusUpdate from './JobStatusUpdate';
 
 const JobApplicationItem = ({ job }) => {
     const { removeJob } = useJobs();
-    const [status, setStatus] = useState(job.status || 'Applied');
+    // const [status, setStatus] = useState(job.status || 'Applied');
 
     const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete this application?')) {
