@@ -1,5 +1,5 @@
 // client/src/components/JobApplicationItem.js
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useJobs } from '../contexts/JobContext';
 import JobStatusUpdate from './JobStatusUpdate';
