@@ -1,10 +1,12 @@
 // client/src/components/JobApplicationItem.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useJobs } from '../contexts/JobContext';
+import JobStatusUpdate from './JobStatusUpdate';
 
 const JobApplicationItem = ({ job }) => {
     const { removeJob } = useJobs();
+    const [status, setStatus] = useState(job.status || 'Applied');
 
     const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete this application?')) {
@@ -32,6 +34,9 @@ const JobApplicationItem = ({ job }) => {
                 <span className={`status status-${job.status.replace(/\s/g, '')}`}>
                     {job.status}
                 </span>
+                {<JobStatusUpdate key={job._id} job={job} />}
+
+
             </p>
             {job.notes && <p><strong>Notes:</strong> {job.notes}</p>}
             <div className="job-actions">

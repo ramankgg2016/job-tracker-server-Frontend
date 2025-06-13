@@ -1,6 +1,6 @@
 // client/src/contexts/JobContext.js
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
-import { getJobs, createJob, updateJob, deleteJob } from '../api/jobApi';
+import { getJobs, createJob, updateJob, deleteJob, updateStatus } from '../api/jobApi';
 
 const JobContext = createContext();
 
@@ -68,6 +68,7 @@ export const JobProvider = ({ children }) => {
         }
     };
 
+
     const removeJob = async (id) => {
         try {
             await deleteJob(id);
@@ -81,6 +82,18 @@ export const JobProvider = ({ children }) => {
             return { success: false, error: err.response?.data?.message };
         }
     };
+    const updateJobStatus = async (id, status) => {
+        try {
+            await updateStatus(id, { status }); // ✅ Pass the status in the body correctly
+            await fetchJobs(currentPage);       // Refresh job list
+            return { success: true };
+        } catch (error) {
+            console.error('Update status error:', error.message);
+            setError(error.message || 'Failed to update job status');
+            return { success: false, error: error.message };
+        }
+    };
+
 
     return (
         <JobContext.Provider
@@ -96,6 +109,7 @@ export const JobProvider = ({ children }) => {
                 addJob,
                 editJob,
                 removeJob,
+                updateJobStatus
             }}
         >
             {children}

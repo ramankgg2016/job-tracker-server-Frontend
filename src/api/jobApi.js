@@ -28,7 +28,10 @@ export const login = (userData) => api.post('/auth/login', userData);     //
 export const getJobs = (params) => api.get('/jobs', { params });// 
 export const getJobById = (id) => api.get(`/jobs/${id}`);
 export const createJob = (jobData) => api.post('/jobs', jobData);         // 
-export const updateJob = (id, jobData) => api.put(`/jobs/${id}`, jobData); // 
-export const deleteJob = (id) => api.delete(`/jobs/${id}`);               // 
+export const updateJob = (id, updateStatus) => api.put(`/jobs/${id}`, updateStatus); // 
+export const deleteJob = (id) => api.delete(`/jobs/${id}`);
+export const updateStatus = (id, editStatus) => {
+    return api.patch(`/jobs/status/${id}`, editStatus);
+};      //
 
 export default api;
